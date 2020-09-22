@@ -20,7 +20,7 @@ Then this one is for you! Get hundreds of random quotes and tweet them with just
 - [Hero Patterns]: Background styling
 - [Grandstander font]: Font style used
 - [Quotes Api]: API url to get quotes
-- [Twitter Api]: Twitter tweet API
+- [Twitter Api]: Twitter tweet API docs
 
 [//]: # (HyperLinks)
 [GitHub]: https://github.com/madazz
@@ -28,5 +28,5 @@ Then this one is for you! Get hundreds of random quotes and tweet them with just
 [Hero Patterns]: https://www.heropatterns.com/
 [Grandstander font]: https://fonts.google.com/specimen/Grandstander?sidebar.open=true&selection.family=Grandstander:wght@200#standard-styles
 [Quotes Api]:https://type.fit/api/quotes
-[Twitter Api]: https://twitter.com/intent/tweet
+[Twitter Api]: https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent
 [Qozo-Quotes]: https://madazz.github.io/Qozo-Quotes
