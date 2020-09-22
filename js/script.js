@@ -1,8 +1,19 @@
 // Encapsulating query url using closure
 const queryData = (function () {
-    var url = 'https://type.fit/api/quotes';
+    let quoteApiUrl = 'https://type.fit/api/quotes';
+    let twitterApiUrl = 'https://twitter.com/intent/tweet';
+    
+    function getTwitterApiURL(){
+        return twitterApiUrl;
+    }
+
+    function getQuoteApiURL(){
+        return quoteApiUrl;
+    }
+
     return {
-        url: url
+        getTwitterApiURL,
+        getQuoteApiURL
     }
 })();
 
@@ -25,9 +36,6 @@ const getNewQuote = async function (url) {
     }
 }
 
-//On load event
-getNewQuote(queryData.url);
-
 const postNewQuote = () => {
     try {
         let randomIndex = Math.floor(Math.random() * quoteArray.length);
@@ -43,4 +51,17 @@ const postNewQuote = () => {
     }
 }
 
+const tweetCurrentQuote = () => {
+    let tweetQuoteText = document.getElementById('quote').innerHTML;
+    let tweetQuoteAuthor = document.getElementById('author').innerHTML;
+    
+    const twitterRequest = `https://twitter.com/intent/tweet?text=${tweetQuoteText} ~ ${tweetQuoteAuthor}`;
+    window.open(twitterRequest, '_blank')
+}
+
 document.getElementById('generate').onclick = postNewQuote;
+
+document.getElementById('twitter').onclick = tweetCurrentQuote;
+
+//On load of js file
+getNewQuote(queryData.getQuoteApiURL());
