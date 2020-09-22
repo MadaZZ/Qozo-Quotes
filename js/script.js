@@ -59,7 +59,6 @@ const postNewQuote = () => {
         showLoadingIndicator();
         let randomIndex = Math.floor(Math.random() * quoteArray.length);
         document.getElementById('quote').innerHTML = quoteArray[randomIndex].text
-        console.log(quoteArray[randomIndex].author);
         if (quoteArray[randomIndex].author === '' || quoteArray[randomIndex].author === null || quoteArray[randomIndex].author === undefined) {
             document.getElementById('author').innerHTML = 'MadaZZ';
         } else {
