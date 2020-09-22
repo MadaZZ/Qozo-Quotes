@@ -1,4 +1,4 @@
-// Encapsulating query url using closure
+// Encapsulating api urls using closure
 const queryData = (function () {
     let quoteApiUrl = 'https://type.fit/api/quotes';
     let twitterApiUrl = 'https://twitter.com/intent/tweet';
@@ -36,6 +36,7 @@ const getNewQuote = async function (url) {
     }
 }
 
+// Function to Update a new quote to the UI
 const postNewQuote = () => {
     try {
         let randomIndex = Math.floor(Math.random() * quoteArray.length);
@@ -51,6 +52,7 @@ const postNewQuote = () => {
     }
 }
 
+// Function Tweet the current quote on the UI
 const tweetCurrentQuote = () => {
     let tweetQuoteText = document.getElementById('quote').innerHTML;
     let tweetQuoteAuthor = document.getElementById('author').innerHTML;
@@ -59,8 +61,8 @@ const tweetCurrentQuote = () => {
     window.open(twitterRequest, '_blank')
 }
 
+// Add event Listeners to buttons
 document.getElementById('generate').onclick = postNewQuote;
-
 document.getElementById('twitter').onclick = tweetCurrentQuote;
 
 //On load of js file
